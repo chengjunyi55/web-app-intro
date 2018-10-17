@@ -1,4 +1,5 @@
 pip install --user gunicorn
+pip freeze > requirements.txt
 git add requirements.txt
-git commit -m "Add list of Pyhton modules needed by Heroku"
+git commit -m "Added list of Python modules needed by Heroku"
 git push origin master
