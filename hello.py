@@ -13,25 +13,22 @@ def render_main():
 @app.route("/clear")
 def clear():
     session.clear()
-    return redirect(url1_for("renderMain"))
+    return redirect(url_for("render_main"))
 
 @app.route("/page1")
 def renderPage1():
     return render_template('page1.html')
-    session.clear()
 
 @app.route('/page2',methods=['GET', 'POST'])
 def renderPage2():
     session["firstName"]=request.form['firstName']
     session["lastName"]=request.form['lastName']
     return render_template('page2.html')
-    session.clear()
 
 @app.route('/page3',methods=['GET', 'POST'])
 def renderPage3():
     session["favoriteColor"]=request.form['favoriteColor']
     return render_template('page3.html')
-    session.clear()
 
 @app.route("/ctof")
 def render_ctof():
